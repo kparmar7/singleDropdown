@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>DATA</h1>
+    <form method="POST" action="{% url 'selectList' %}">
+        {% csrf_token %}
+        <div>{{FORM}}</div>
+        <input type="submit" value="FILTER">
+    </form>
+
+    {% if DATA %}
+        {% for d in DATA %}
+        <h2>{{d.id}} :: {{d.name}} :: {{d.country}}</h2>
+        {%endfor%}
+    {% endif %}
+</body>
+</html>

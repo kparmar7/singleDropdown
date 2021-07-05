@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FORM</title>
+</head>
+<body>
+    <h1>FORM DATA</h1>
+    <form action="{% url 'select' %}" method="GET123">
+        {% csrf_token %}
+        {{FORM}}
+        <input type="submit">
+    </form>
+</body>
+</html>
